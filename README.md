@@ -1,3 +1,33 @@
+# nypd-complaints-react-mapbox
+
+# 🚀 Visualization of civilian complaints against New York City police officers as provided by ProPublica. 🚀
+
+https://github.com/coding-to-music/nypd-complaints-react-mapbox
+
+https://nypd-complaints-react-mapbox.vercel.app
+
+From / By https://github.com/blahblahblah-/nypd-complaints
+
+https://www.nypdcomplaints.com
+
+## Environment variables:
+
+```java
+REACT_APP_MAPBOX_TOKEN=""
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/nypd-complaints-react-mapbox.git
+git push -u origin main
+```
+
 # NYPD Complaints
 
 A frontend-only React app, providing visualization of civilian complaints against New York City police officers as provided by ProPublica.
