@@ -49,6 +49,21 @@ git push -u origin main
 Run ncu -u to upgrade package.json
 ```
 
+# NPM run start gives errors
+
+```
+Compiled with problems:X
+
+ERROR in ./src/App.jsx 21:4-37
+
+Module not found: Error: Can't resolve './data/allegations.json' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/src'
+
+
+ERROR in ./src/App.jsx 72:38-48
+
+export 'Responsive' (imported as 'Responsive') was not found in 'semantic-ui-react' (possible exports: Accordion, AccordionAccordion, AccordionContent, AccordionPanel, AccordionTitle, Advertisement, Breadcrumb,
+```
+
 # NYPD Complaints
 
 A frontend-only React app, providing visualization of civilian complaints against New York City police officers as provided by ProPublica.
