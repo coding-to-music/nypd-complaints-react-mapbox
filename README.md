@@ -64,6 +64,12 @@ ERROR in ./src/App.jsx 72:38-48
 export 'Responsive' (imported as 'Responsive') was not found in 'semantic-ui-react' (possible exports: Accordion, AccordionAccordion, AccordionContent, AccordionPanel, AccordionTitle, Advertisement, Breadcrumb,
 ```
 
+## Need to create file
+
+Downloaded File is named: allegations_202007271729.csv
+
+Needs to be called allegations.json and be stored in ./src/data
+
 # NYPD Complaints
 
 A frontend-only React app, providing visualization of civilian complaints against New York City police officers as provided by ProPublica.
