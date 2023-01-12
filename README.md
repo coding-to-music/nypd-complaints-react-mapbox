@@ -28,6 +28,27 @@ git remote add origin git@github.com:coding-to-music/nypd-complaints-react-mapbo
 git push -u origin main
 ```
 
+## Update/upgrade NPM dependancies
+
+```
+[====================] 14/14 100%
+
+ @nivo/bar                     ^0.62.0  →  ^0.80.0
+ @testing-library/jest-dom      ^4.2.4  →  ^5.16.5
+ @testing-library/react         ^9.3.2  →  ^13.4.0
+ @testing-library/user-event    ^7.1.2  →  ^14.4.3
+ mapbox-gl                     ^1.11.1  →  ^2.12.0
+ node-sass                     ^4.14.1  →   ^8.0.0
+ react                        ^16.13.1  →  ^18.2.0
+ react-datepicker               ^3.1.3  →   ^4.8.0
+ react-dom                    ^16.13.1  →  ^18.2.0
+ react-router-dom               ^5.2.0  →   ^6.6.2
+ react-scripts                   3.4.1  →    5.0.1
+ semantic-ui-react              ^1.0.0  →   ^2.1.4
+
+Run ncu -u to upgrade package.json
+```
+
 # NYPD Complaints
 
 A frontend-only React app, providing visualization of civilian complaints against New York City police officers as provided by ProPublica.
@@ -38,19 +59,17 @@ See it live at https://www.nypdcomplaints.com.
 
 ## Running locally
 
-`````
+```
 $ brew install yarn
 $ yarn install
-`````
+```
 
-* Sign up for an account with [Mapbox](https://www.mapbox.com), get a token and add it to an `.env` file as `REACT_APP_MAPBOX_TOKEN`.
+- Sign up for an account with [Mapbox](https://www.mapbox.com), get a token and add it to an `.env` file as `REACT_APP_MAPBOX_TOKEN`.
 
-* Download datasets from [ProPublica](https://www.propublica.org/datastore/dataset/civilian-complaints-against-new-york-city-police-officers), drop CSV file into `data/`
-* Download [NYC Police Precincts map data](https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz), drop geojson file as `src/data/precincts.json`
+- Download datasets from [ProPublica](https://www.propublica.org/datastore/dataset/civilian-complaints-against-new-york-city-police-officers), drop CSV file into `data/`
+- Download [NYC Police Precincts map data](https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz), drop geojson file as `src/data/precincts.json`
 
-`````
+```
 $ node scripts/generateDataJson.js
 $ yarn start
-`````
-
-
+```
