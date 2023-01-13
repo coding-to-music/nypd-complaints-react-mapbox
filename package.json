@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "git add . && git commit -m Build && git push",
-    "eject": "react-scripts eject"
+    "seed": "node scripts/generateDataJson.js"
   },
   "eslintConfig": {
     "extends": "react-app"

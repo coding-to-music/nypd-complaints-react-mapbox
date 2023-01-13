@@ -52,16 +52,11 @@ Run ncu -u to upgrade package.json
 # NPM run start gives errors
 
 ```
-Compiled with problems:X
+Failed to compile.
 
-ERROR in ./src/App.jsx 21:4-37
-
-Module not found: Error: Can't resolve './data/allegations.json' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/src'
-
-
+Attempted import error: 'Responsive' is not exported from 'semantic-ui-react' (imported as 'Responsive').
 ERROR in ./src/App.jsx 72:38-48
-
-export 'Responsive' (imported as 'Responsive') was not found in 'semantic-ui-react' (possible exports: Accordion, AccordionAccordion, AccordionContent, AccordionPanel, AccordionTitle, Advertisement, Breadcrumb,
+export 'Responsive' (imported as 'Responsive') was not found in 'semantic-ui-react'
 ```
 
 ## Need to create file
