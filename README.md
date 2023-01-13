@@ -4,11 +4,17 @@
 
 https://github.com/coding-to-music/nypd-complaints-react-mapbox
 
-https://nypd-complaints-react-mapbox.vercel.app
+https://nypd-complaints-react-mapbox.vercel.app (not set up)
 
 From / By https://github.com/blahblahblah-/nypd-complaints
 
 https://www.nypdcomplaints.com
+
+https://www.propublica.org/datastore/dataset/civilian-complaints-against-new-york-city-police-officers
+
+33,358 rows of data
+
+https://medium.com/@_blahblahblah/visualizing-the-propublica-nypd-files-41c0ccc8a156
 
 ## Environment variables:
 
