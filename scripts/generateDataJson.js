@@ -1,8 +1,8 @@
-const csv = require('csvtojson');
-const fs = require('fs');
+const csv = require("csvtojson");
+const fs = require("fs");
 
-const path = `${__dirname}/../data/`
-const fileRegex = /^allegations_.*\.csv$/
+const path = `${__dirname}/../data/`;
+const fileRegex = /^allegations_.*\.csv$/;
 
 const convertObj = (obj, id) => {
   return {
@@ -26,35 +26,52 @@ const convertObj = (obj, id) => {
     fado_type: obj.fado_type,
     allegation: obj.allegation,
     precinct: obj.precinct,
-    board_disposition: obj.board_disposition
+    board_disposition: obj.board_disposition,
   };
-}
-
+};
 
 (async () => {
   const data = [];
   let count = 1;
 
-  await Promise.all(fs.readdirSync(path).filter((filename) => {
-    return fileRegex.test(filename);
-  }).map((filename) => {
-    const filePath = path + filename;
-    return csv().fromFile(filePath).subscribe(
-      (obj) => {
-        const convertedObj = convertObj(obj, count++);
-        data.push(convertedObj);
-      },
-      () => console.log('error'),
-      () => console.log('success')
-    );
-  }));
+  await Promise.all(
+    fs
+      .readdirSync(path)
+      .filter((filename) => {
+        return fileRegex.test(filename);
+      })
+      .map((filename) => {
+        const filePath = path + filename;
+        return csv()
+          .fromFile(filePath)
+          .subscribe(
+            (obj) => {
+              const convertedObj = convertObj(obj, count++);
+              data.push(convertedObj);
+              if (count % 5000 === 0) {
+                console.log("%s rows processed", count);
+              }
+            },
+            () => console.log("error"),
+            () => {
+              console.log("%s rows processed", count);
+              console.log("success");
+            }
+          );
+      })
+  );
 
   const jsonData = JSON.stringify({
-    data: data
+    data: data,
   });
 
-  fs.writeFile(`${__dirname}/../src/data/allegations.json`, jsonData, 'utf8', (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
+  fs.writeFile(
+    `${__dirname}/../src/data/allegations.json`,
+    jsonData,
+    "utf8",
+    (err) => {
+      if (err) throw err;
+      console.log("The file has been saved!");
+    }
+  );
 })();
