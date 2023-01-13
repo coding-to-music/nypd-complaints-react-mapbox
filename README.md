@@ -65,6 +65,8 @@ Downloaded File is named: allegations_202007271729.csv
 
 Needs to be called allegations.json and be stored in ./src/data
 
+Then run npm run seed and the json file will be created from the .csv file
+
 # NYPD Complaints
 
 A frontend-only React app, providing visualization of civilian complaints against New York City police officers as provided by ProPublica.
@@ -88,4 +90,27 @@ $ yarn install
 ```
 $ node scripts/generateDataJson.js
 $ yarn start
+```
+
+## Seed the json file with data from the csv
+
+```
+npm run seed
+```
+
+Output
+
+```
+> nypd-complaints-react-mapbox@0.1.0 seed
+> node scripts/generateDataJson.js
+
+5000 rows processed
+10000 rows processed
+15000 rows processed
+20000 rows processed
+25000 rows processed
+30000 rows processed
+33359 rows processed
+success
+The file has been saved!
 ```
