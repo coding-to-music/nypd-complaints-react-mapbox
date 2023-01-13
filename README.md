@@ -59,6 +59,68 @@ ERROR in ./src/App.jsx 72:38-48
 export 'Responsive' (imported as 'Responsive') was not found in 'semantic-ui-react'
 ```
 
+## docs(Responsive): deprecate
+
+This PR marks Responsive as deprecated, we will remove it in the next major release, i.e. 2.0.0.
+
+https://github.com/Semantic-Org/Semantic-UI-React/pull/4008
+
+https://www.npmjs.com/package/semantic-ui-react?activeTab=versions
+
+Previous version was 1.3.1
+
+```
+npm install semantic-ui-react@1.3.1 --legacy-peer-deps
+```
+
+## Still getting errors
+
+```
+  "dependencies": {
+    "@nivo/bar": "^0.80.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "mapbox-gl": "^2.12.0",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "5.0.1",
+    "semantic-ui-react": "^1.3.1"
+  },
+```
+
+```
+Failed to compile.
+
+Attempted import error: 'Switch' is not exported from 'react-router-dom' (imported as 'Switch').
+ERROR in ./src/App.jsx 157:53-59
+export 'Switch' (imported as 'Switch') was not found in 'react-router-dom' (possible exports: AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, UNSAFE_DataRouterContext, UNSAFE_DataRouterStateContext, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, UNSAFE_enhanceManualRouteObjects, UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, renderMatches, resolvePath, unstable_HistoryRouter, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit)
+
+ERROR in ./src/App.jsx 201:39-47
+export 'Redirect' (imported as 'Redirect') was not found in 'react-router-dom' (possible exports: AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, UNSAFE_DataRouterContext, UNSAFE_DataRouterStateContext, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, UNSAFE_enhanceManualRouteObjects, UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, renderMatches, resolvePath, unstable_HistoryRouter, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit)
+
+ERROR in ./node_modules/@nivo/annotations/dist/nivo-annotations.es.js 5:0-184
+Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/annotations/dist'
+
+ERROR in ./node_modules/@nivo/axes/dist/nivo-axes.es.js 4:0-112
+Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/axes/dist'
+
+ERROR in ./node_modules/@nivo/bar/dist/nivo-bar.es.js 5:0-301
+Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/bar/dist'
+
+ERROR in ./node_modules/@nivo/legends/dist/nivo-legends.es.js 3:0-90
+Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/legends/dist'
+
+ERROR in ./node_modules/@nivo/tooltip/dist/nivo-tooltip.es.js 3:0-106
+Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/tooltip/dist'
+
+webpack compiled with 7 errors
+```
+
 ## Need to create file
 
 Downloaded File is named: allegations_202007271729.csv
