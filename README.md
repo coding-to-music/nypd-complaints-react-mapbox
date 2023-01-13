@@ -93,6 +93,8 @@ npm install semantic-ui-react@1.3.1 --legacy-peer-deps
   },
 ```
 
+## Errors
+
 ```
 Failed to compile.
 
@@ -119,6 +121,32 @@ ERROR in ./node_modules/@nivo/tooltip/dist/nivo-tooltip.es.js 3:0-106
 Module not found: Error: Can't resolve '@nivo/core' in '/mnt/volume_nyc1_01/nypd-complaints-react-mapbox/node_modules/@nivo/tooltip/dist'
 
 webpack compiled with 7 errors
+```
+
+## Another install needed: @nivo/core
+
+```
+npm i @nivo/core --legacy-peer-deps
+```
+
+## npm run start
+
+```
+
+Attempted import error: 'Switch' is not exported from 'react-router-dom' (imported as 'Switch').
+ERROR in ./src/App.jsx 157:53-59
+export 'Switch' (imported as 'Switch') was not found in 'react-router-dom' (possible exports: AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, UNSAFE_DataRouterContext, UNSAFE_DataRouterStateContext, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, UNSAFE_enhanceManualRouteObjects, UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, renderMatches, resolvePath, unstable_HistoryRouter, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit)
+
+ERROR in ./src/App.jsx 201:39-47
+export 'Redirect' (imported as 'Redirect') was not found in 'react-router-dom' (possible exports: AbortedDeferredError, Await, BrowserRouter, Form, HashRouter, Link, MemoryRouter, NavLink, Navigate, NavigationType, Outlet, Route, Router, RouterProvider, Routes, ScrollRestoration, UNSAFE_DataRouterContext, UNSAFE_DataRouterStateContext, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, UNSAFE_enhanceManualRouteObjects, UNSAFE_useScrollRestoration, createBrowserRouter, createHashRouter, createMemoryRouter, createPath, createRoutesFromChildren, createRoutesFromElements, createSearchParams, defer, generatePath, isRouteErrorResponse, json, matchPath, matchRoutes, parsePath, redirect, renderMatches, resolvePath, unstable_HistoryRouter, useActionData, useAsyncError, useAsyncValue, useBeforeUnload, useFetcher, useFetchers, useFormAction, useHref, useInRouterContext, useLinkClickHandler, useLoaderData, useLocation, useMatch, useMatches, useNavigate, useNavigation, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRevalidator, useRouteError, useRouteLoaderData, useRoutes, useSearchParams, useSubmit)
+
+webpack compiled with 2 errors
+```
+
+## Install earlier version of react-router-dom
+
+```
+npm install react-router-dom@5.3.4 --legacy-peer-deps
 ```
 
 ## Need to create file
